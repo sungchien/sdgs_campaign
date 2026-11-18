@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <!-- 基礎字元編碼與行動裝置自適應視口設定 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 網頁標題與搜尋引擎描述 (SEO) -->
+  <title>《格外美好》生活倡議專案｜SDG 12.3 外宿生格外品剩食搶救行動</title>
+  <meta name="description" content="外表不完美，風味更甜美！響應聯合國 SDG 12.3 減少糧食浪費目標，與大學外宿生一起用格外品蔬果打造平價、低碳又健康的深夜食堂。">
+
+  <!-- 外部樣式表引用（嚴格遵守關注點分離原則） -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       模組 1：頂部導覽列 (Header & Navigation)
+       ========================================== -->
+  <header class="site-header">
+    <nav id="navbar" class="navbar" aria-label="主導覽列">
+      <div class="nav-container">
+        <!-- 品牌 Logo 與專案名稱 -->
+        <a href="#hero" class="brand-logo" aria-label="回到格外美好首頁">
+          <span class="logo-badge">SDG 12.3</span>
+          <span class="brand-title">《格外美好》生活倡議專案</span>
+        </a>
+
+        <!-- 行動裝置漢堡選單切換按鈕 -->
+        <button type="button" id="menu-toggle" class="menu-toggle" aria-label="開啟或關閉導覽選單" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- 錨點導航清單 -->
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#hero">倡議痛點</a></li>
+          <li><a href="#problem">數據真相</a></li>
+          <li><a href="#solution">永續解方</a></li>
+          <li><a href="#action">立即行動</a></li>
+          <li><a href="#footer">關於我們</a></li>
+        </ul>
+
+        <!-- 導覽列行動呼籲快捷按鈕 (Mini-CTA) -->
+        <a href="#action" class="btn-mini-cta" aria-label="前往立即簽署外宿採購公約">立即響應</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 主要內容區塊 -->
+  <main id="main-content">
+
+    <!-- ==========================================
+         模組 2：首頁旗艦橫幅 (Hero Section)
+         ========================================== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <!-- 左側：核心倡議主張與微行動呼籲 -->
+        <div class="hero-content">
+          <p class="sdg-tag">SDG 12 責任消費與生產｜Target 12.3 格外品剩食搶救</p>
+          <h1 id="hero-title" class="hero-slogan">外表不完美，風味更甜美！用格外品打造平價深夜食堂</h1>
+          <p class="hero-subtitle">
+            專為大學外宿生打造的惜食生活提案：外食昂貴、月底荷包吃緊，不代表必須犧牲健康。選購營養 100% 保留的「格外品蔬果」，用銅板價煮出暖心宵夜，把被忽視的好食材變成餐桌上的美味驚喜。
+          </p>
+          <div class="hero-actions">
+            <!-- 第一階微行動 (Micro-CTA) -->
+            <button type="button" id="btn-micro-cta" class="btn-primary" aria-label="開始30秒測測你的外宿蔬果赤字">
+              30秒測測你的外宿蔬果赤字
+            </button>
+          </div>
+          <!-- 微行動互動反饋容器（供 JavaScript 動態渲染測驗或結果使用） -->
+          <div id="quiz-feedback" class="quiz-feedback" aria-live="polite" hidden></div>
+        </div>
+
+        <!-- 右側：第 4 週核心主視覺海報 -->
+        <div class="hero-visual">
+          <img 
+            src="img/hero_poster.jpg" 
+            alt="《格外美好》生活倡議主視覺海報：展示彎曲小黃瓜、雙腳紅蘿蔔與微瑕番茄在大學生溫馨深夜廚房中化為豐盛料理，傳遞外表不完美但營養與風味滿分的惜食理念" 
+            class="hero-poster"
+            width="600"
+            height="750"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         模組 3：痛點數據錨點區 (Problem & Data Section)
+         ========================================== -->
+    <section id="problem" class="problem-section" aria-labelledby="problem-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">DATA TRUTH</p>
+          <h2 id="problem-title" class="section-title">你看不見的日常浪費</h2>
+          <p class="section-desc">
+            當我們在超市挑選外觀筆直、大小一致的蔬果時，大量新鮮安全的農產品正因「長相不合規格」而在產地與批發端被無聲淘汰。
+          </p>
+        </header>
+
+        <!-- 三大權威數據卡片 -->
+        <div class="data-cards-grid">
+          <!-- 卡片 1：震撼型數據 -->
+          <article class="data-card">
+            <span class="data-badge">震撼型數據</span>
+            <p class="data-number" data-target="380">380 萬噸+</p>
+            <h3 class="data-card-title">每分鐘浪費 7.2 噸食物</h3>
+            <p class="data-card-text">
+              台灣每年丟棄超過 380 萬噸格外蔬果，相當於每分鐘浪費 7.2 噸食物。這些食材並非腐壞，只是因為彎曲、過大或表皮微瑕而未能進入主流通路。
+            </p>
+          </article>
+
+          <!-- 卡片 2：對比型數據 -->
+          <article class="data-card">
+            <span class="data-badge">對比型數據</span>
+            <p class="data-number" data-target="100">100% 保留</p>
+            <h3 class="data-card-title">營養價值與頂級品完全相同</h3>
+            <p class="data-card-text">
+              僅因外貌微疵被棄置的格外品，其維生素 C 與微量元素與頂級品完全相同，營養價值 100% 保留，切開下鍋後的口感與香氣毫無差異。
+            </p>
+          </article>
+
+          <!-- 卡片 3：切身型數據 -->
+          <article class="data-card">
+            <span class="data-badge">切身型數據</span>
+            <p class="data-number" data-target="1200">省 $1,200 / 月</p>
+            <h3 class="data-card-title">每月減少 18 公斤碳排</h3>
+            <p class="data-card-text">
+              每位大學外宿生每年因蔬果昂貴減少攝取，但若採購格外品，每月可省下 $1,200 元並減少 18 公斤碳排，同時拯救自己的健康與荷包。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         模組 4：倡議解方路徑 (Solution Section)
+         ========================================== -->
+    <section id="solution" class="solution-section" aria-labelledby="solution-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">SUSTAINABLE SOLUTION</p>
+          <h2 id="solution-title" class="section-title">三步驟，輕鬆翻轉日常</h2>
+          <p class="section-desc">
+            不需複雜廚藝，只要改變三個小習慣，就能在租屋處用快煮鍋完成平價低碳的格外品料理。
+          </p>
+        </header>
+
+        <!-- 三步驟導引卡 -->
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <article class="step-card">
+            <div class="step-indicator">Step 1</div>
+            <h3 class="step-title">認知認同：打破外貌迷思</h3>
+            <p class="step-text">
+              理解蔬果的自然生長差異，分辨「表皮微瑕、形狀彎曲的格外品」與「劣質腐敗品」的不同，不再以單一外觀標準決定食材價值。
+            </p>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="step-card">
+            <div class="step-indicator">Step 2</div>
+            <h3 class="step-title">友善選購：支持平價惜食箱</h3>
+            <p class="step-text">
+              優先選購校園周邊惜食攤位、合作小農直送或超市格外品專區的蔬果，以低於市價 3 至 5 折的預算補足每日膳食纖維。
+            </p>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="step-card">
+            <div class="step-indicator">Step 3</div>
+            <h3 class="step-title">社群擴散：開箱深夜食堂</h3>
+            <p class="step-text">
+              與室友共同分購格外品蔬果箱，用快煮鍋完成一鍋到底料理，並將你的「醜蔬果神仙料理」分享至社群，帶動更多外宿同儕加入。
+            </p>
+          </article>
+        </div>
+
+        <!-- 第二階體驗行動 (Engagement-CTA) -->
+        <div class="solution-cta-box">
+          <p class="solution-cta-prompt">不知道彎曲小黃瓜與微瑕番茄怎麼煮？我們整理了零失敗快煮鍋食譜！</p>
+          <button type="button" id="btn-engagement-cta" class="btn-secondary" aria-label="領取外宿格外品深夜食譜指南">
+            領取外宿格外品深夜食譜指南
+          </button>
+          <p id="recipe-feedback" class="recipe-feedback" aria-live="polite" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         模組 5：受眾專屬轉換區 (Persona & Action Section)
+         ========================================== -->
+    <section id="action" class="action-section" aria-labelledby="action-title">
+      <div class="container action-grid">
+        <!-- 左側：Persona 共鳴情境 -->
+        <article class="persona-card" aria-label="外宿生代表人物故事">
+          <span class="persona-tag">外宿生真實心聲</span>
+          <h2 id="action-title" class="section-title">像阿豪一樣的外宿族，你可以吃得更好</h2>
+          <p class="persona-bio">
+            <strong>代表人物：阿豪（20 歲，大學外宿生）</strong><br>
+            平時課業與打工忙碌，三餐總依賴便當與超商微波食品。每次走進超市看到高昂的漂亮蔬果總下不了手，月底荷包緊張時只能靠泡麵果腹，卻又擔心營養不均與體力下滑。
+          </p>
+          <ul class="persona-benefits">
+            <li><strong>荷包友善：</strong>用格外品取代高價包裝蔬果，每月省下 $1,200 元伙食費。</li>
+            <li><strong>營養滿分：</strong>100% 保留維生素 C 與膳食纖維，告別外食油膩感。</li>
+            <li><strong>低碳減廢：</strong>每月實質減少 18 公斤碳排，直接支持台灣在地小農。</li>
+          </ul>
+        </article>
+
+        <!-- 右側：倡議承諾線上表單 -->
+        <div class="pledge-form-wrapper">
+          <h3 class="form-title">簽署《外宿生格外品友善採購公約》</h3>
+          <p class="form-subtitle">完成連署即可立即解鎖合作小農專屬 85 折優惠碼與免運湊團資格。</p>
+
+          <form id="pledge-form" class="pledge-form" novalidate>
+            <!-- 暱稱輸入框 -->
+            <div class="form-group">
+              <label for="user-name">你的暱稱 <span class="required-mark" aria-hidden="true">*</span></label>
+              <input 
+                type="text" 
+                id="user-name" 
+                name="userName" 
+                placeholder="例如：文山區快煮鍋小當家、資傳阿豪" 
+                required 
+                aria-required="true"
+              >
+            </div>
+
+            <!-- 身分或大學科系選單 -->
+            <div class="form-group">
+              <label for="user-role">身分或所屬學院 / 科系</label>
+              <select id="user-role" name="userRole">
+                <option value="資訊傳播與新聞傳播學群">資訊傳播與新聞傳播學群</option>
+                <option value="人文社會與管理學群">人文社會與管理學群</option>
+                <option value="理工與資訊學群">理工與資訊學群</option>
+                <option value="藝術與設計學群">藝術與設計學群</option>
+                <option value="研究生與教職員">研究生與教職員</option>
+                <option value="校外租屋青年與惜食夥伴">校外租屋青年與惜食夥伴</option>
+              </select>
+            </div>
+
+            <!-- 承諾勾選框 -->
+            <div class="form-group checkbox-group">
+              <input 
+                type="checkbox" 
+                id="pledge-check" 
+                name="pledgeCheck" 
+                required 
+                aria-required="true"
+              >
+              <label for="pledge-check">
+                我願意打破蔬果外貌迷思，優先選購營養價值 100% 相同的格外品蔬果，實踐 SDG 12.3 零剩食生活！
+              </label>
+            </div>
+
+            <!-- 第三階核心承諾行動按鈕 (Conversion-CTA) -->
+            <button type="submit" class="btn-cta" aria-label="立即簽署外宿採購公約，領取合作小農優惠碼">
+              立即簽署外宿採購公約，領取合作小農優惠碼
+            </button>
+
+            <!-- 表單送出後之動態回饋訊息區 -->
+            <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         模組 6：社會認同與承諾牆 (Social Proof Section)
+         ========================================== -->
+    <section id="social-proof" class="social-proof-section" aria-labelledby="social-proof-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">SOCIAL PROOF</p>
+          <h2 id="social-proof-title" class="section-title">同儕響應與惜食承諾牆</h2>
+        </header>
+
+        <!-- 即時累計連署計數器 -->
+        <div class="counter-box" aria-live="polite">
+          <p class="counter-label">目前已有</p>
+          <p class="counter-value">
+            <span id="counter">1,248</span> 人已加入
+          </p>
+          <p class="counter-subtext">《格外美好》外宿惜食採購行動，共同減少超過 22,464 公斤碳排放</p>
+        </div>
+
+        <!-- 3 則同儕支持者真實聲援留言 -->
+        <div id="pledge-wall" class="testimonials-grid">
+          <article class="testimonial-card">
+            <p class="testimonial-quote">
+              「以前去超市總覺得歪掉的小黃瓜怪怪的，自從跟室友一起訂格外品蔬果箱後，切丁煮咖哩根本吃不出差別，這個月伙食費直接省下一千多塊！」
+            </p>
+            <footer class="testimonial-author">
+              <strong class="author-name">阿豪（大二外宿生）</strong>
+              <span class="author-dept">資訊傳播與新聞傳播學群</span>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-quote">
+              「在租屋處用快煮鍋煮微瑕牛番茄豆腐湯超方便，維生素 C 一點都沒少，熬夜趕專題時終於不用再吃油膩泡麵了！」
+            </p>
+            <footer class="testimonial-author">
+              <strong class="author-name">小芸（大三外宿生）</strong>
+              <span class="author-dept">藝術與設計學群</span>
+            </footer>
+          </article>
+
+          <article class="testimonial-card">
+            <p class="testimonial-quote">
+              「知道台灣每年丟掉 380 萬噸格外蔬果真的超震撼。現在每週固定跟宿舍樓友湊單買小農格外品，省錢又能幫產地減廢，很有成就感！」
+            </p>
+            <footer class="testimonial-author">
+              <strong class="author-name">凱文（大四外宿生）</strong>
+              <span class="author-dept">人文社會與管理學群</span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       模組 7：頁尾透明揭露與版權 (Footer Section)
+       ========================================== -->
+  <footer id="footer" class="site-footer">
+    <div class="container footer-content">
+      <!-- 小組資訊與 SDGs 專題名稱 -->
+      <div class="footer-brand">
+        <h2 class="footer-title">《格外美好》生活倡議專案</h2>
+        <p class="footer-sdg">聯合國永續發展目標 SDG 12 責任消費與生產｜Target 12.3 格外品剩食搶救</p>
+        <p class="footer-team">執行團隊：網站規劃與設計課程專案小組｜聯絡信箱：uglywood-sdg12@campus.edu.tw</p>
+      </div>
+
+      <!-- 第 7 週 SynthID 與 AI 透明揭露專區 -->
+      <div class="synthid-disclosure" role="note" aria-label="生成式 AI 透明揭露聲明">
+        <h3 class="disclosure-title">AI 透明揭露與負責任使用聲明 (SynthID Disclosure)</h3>
+        <p class="disclosure-text">
+          本專案主視覺海報由 Google Imagen 3 生成並經 SynthID 數位浮水印簽署，全站文案與程式碼由 Google Gemini 協同完成，秉持負責任生成式 AI 原則。
+        </p>
+      </div>
+
+      <!-- 版權年份與課程學期標記 -->
+      <div class="footer-copyright">
+        <p>&copy; 2026 《格外美好》生活倡議專案小組. All Rights Reserved.｜114-2 學期 SDGs 永續倡議網頁設計專題</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 外部 JavaScript 腳本引用（使用 defer 確保 DOM 解析完成後執行） -->
+  <script src="script.js" defer></script>
+</body>
+</html>
