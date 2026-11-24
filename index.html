@@ -105,10 +105,77 @@
           <article class="data-card">
             <span class="data-badge">震撼型數據</span>
             <p class="data-number" data-target="380">380 萬噸+</p>
-            <h3 class="data-card-title">每分鐘浪費 7.2 噸食物</h3>
+            <h3 class="data-card-title">相當於每秒浪費 600 個漢堡</h3>
             <p class="data-card-text">
-              台灣每年丟棄超過 380 萬噸格外蔬果，相當於每分鐘浪費 7.2 噸食物。這些食材並非腐壞，只是因為彎曲、過大或表皮微瑕而未能進入主流通路。
+              台灣每年丟棄超過 380 萬噸格外蔬果，平均每分鐘浪費 7.2 噸（每秒 120 公斤）——以每顆 200 克換算，等於每 1 秒就有 600 個漢堡的食材白白消失，而非腐壞。
             </p>
+            <figure class="data-chart" aria-label="每秒食物浪費量等比例漢堡圖示矩陣">
+              <figcaption class="data-chart-header">
+                <span class="data-chart-title">每秒浪費量實感換算</span>
+                <span class="data-chart-unit">1 圖示 = 20 個漢堡</span>
+              </figcaption>
+              <svg class="data-chart-svg" viewBox="0 0 320 148" role="img" aria-labelledby="chart1-title">
+                <title id="chart1-title">每秒浪費 120 公斤食物換算等比例矩陣：相當於每 1 秒丟掉 600 個漢堡（每顆以 200 克計，30 個圖示各代表 20 個漢堡）</title>
+                <defs>
+                  <!-- 單一漢堡向量圖示（22x18） -->
+                  <g id="burger-icon">
+                    <path d="M2,8 C2,3 6,1 11,1 C16,1 20,3 20,8 Z" fill="#F4A261" />
+                    <circle cx="8" cy="4.2" r="0.8" fill="#FFF8E7" />
+                    <circle cx="13.5" cy="4" r="0.8" fill="#FFF8E7" />
+                    <circle cx="11" cy="5.8" r="0.8" fill="#FFF8E7" />
+                    <path d="M1.5,9.5 Q4,8 6.5,9.5 T11.5,9.5 T16.5,9.5 T20.5,9.5" fill="none" stroke="#52B788" stroke-width="2" stroke-linecap="round" />
+                    <rect x="2" y="10.8" width="18" height="3.2" rx="1.5" fill="#C84B31" />
+                    <path d="M2.5,14.6 L19.5,14.6 C19.5,16.6 17.5,17.5 11,17.5 C4.5,17.5 2.5,16.6 2.5,14.6 Z" fill="#E9B468" />
+                  </g>
+                </defs>
+
+                <!-- 頂部重點換算橫幅 -->
+                <rect class="chart-banner-warn" x="10" y="4" width="300" height="28" rx="7" />
+                <text class="chart-banner-text" x="160" y="22">
+                  每 1 秒鐘 ＝ 120 公斤食材 ＝ <tspan class="chart-banner-highlight">600 個漢堡</tspan>
+                </text>
+
+                <!-- 10 × 3 等比例漢堡圖示陣列（共 30 個，無比例失真） -->
+                <g class="chart-isotype-grid">
+                  <!-- 第 1 列 -->
+                  <use href="#burger-icon" x="18" y="42" />
+                  <use href="#burger-icon" x="47" y="42" />
+                  <use href="#burger-icon" x="76" y="42" />
+                  <use href="#burger-icon" x="105" y="42" />
+                  <use href="#burger-icon" x="134" y="42" />
+                  <use href="#burger-icon" x="163" y="42" />
+                  <use href="#burger-icon" x="192" y="42" />
+                  <use href="#burger-icon" x="221" y="42" />
+                  <use href="#burger-icon" x="250" y="42" />
+                  <use href="#burger-icon" x="279" y="42" />
+                  <!-- 第 2 列 -->
+                  <use href="#burger-icon" x="18" y="68" />
+                  <use href="#burger-icon" x="47" y="68" />
+                  <use href="#burger-icon" x="76" y="68" />
+                  <use href="#burger-icon" x="105" y="68" />
+                  <use href="#burger-icon" x="134" y="68" />
+                  <use href="#burger-icon" x="163" y="68" />
+                  <use href="#burger-icon" x="192" y="68" />
+                  <use href="#burger-icon" x="221" y="68" />
+                  <use href="#burger-icon" x="250" y="68" />
+                  <use href="#burger-icon" x="279" y="68" />
+                  <!-- 第 3 列 -->
+                  <use href="#burger-icon" x="18" y="94" />
+                  <use href="#burger-icon" x="47" y="94" />
+                  <use href="#burger-icon" x="76" y="94" />
+                  <use href="#burger-icon" x="105" y="94" />
+                  <use href="#burger-icon" x="134" y="94" />
+                  <use href="#burger-icon" x="163" y="94" />
+                  <use href="#burger-icon" x="192" y="94" />
+                  <use href="#burger-icon" x="221" y="94" />
+                  <use href="#burger-icon" x="250" y="94" />
+                  <use href="#burger-icon" x="279" y="94" />
+                </g>
+
+                <line class="chart-divider-line" x1="10" y1="123" x2="310" y2="123" />
+                <text class="chart-note-label" x="160" y="139">等比例圖示：30 格 × 20 個 ＝ 每秒 600 個漢堡（每顆約 200g）</text>
+              </svg>
+            </figure>
           </article>
 
           <!-- 卡片 2：對比型數據 -->
@@ -119,16 +186,118 @@
             <p class="data-card-text">
               僅因外貌微疵被棄置的格外品，其維生素 C 與微量元素與頂級品完全相同，營養價值 100% 保留，切開下鍋後的口感與香氣毫無差異。
             </p>
+            <figure class="data-chart" aria-label="頂級品與格外品營養價值對比圖">
+              <figcaption class="data-chart-header">
+                <span class="data-chart-title">頂級品 vs. 格外品實測</span>
+                <span class="data-chart-legend">
+                  <span class="legend-item"><i class="legend-dot legend-dot-top"></i>頂級品</span>
+                  <span class="legend-item"><i class="legend-dot legend-dot-ugly"></i>格外品</span>
+                </span>
+              </figcaption>
+              <svg class="data-chart-svg" viewBox="0 0 320 148" role="img" aria-labelledby="chart2-title">
+                <title id="chart2-title">營養保留 100% 圓環與並列長條圖：格外品與頂級品在維生素 C、微量元素與口感香氣皆為 100% 相同</title>
+                <!-- 左側 100% 營養保留圓環儀表 -->
+                <circle class="chart-donut-track" cx="56" cy="74" r="38" />
+                <circle class="chart-donut-fill" cx="56" cy="74" r="38" />
+                <text class="chart-donut-value" x="56" y="72">100%</text>
+                <text class="chart-donut-sub" x="56" y="89">營養保留</text>
+
+                <!-- 右側並列對比條形圖 -->
+                <!-- 指標 1：維生素 C -->
+                <text class="chart-bar-label" x="116" y="23">維生素 C</text>
+                <text class="chart-bar-pct" x="304" y="23">100%</text>
+                <rect class="chart-bar-top" x="116" y="29" width="188" height="8" rx="4" />
+                <rect class="chart-bar-ugly" x="116" y="40" width="188" height="8" rx="4" />
+
+                <!-- 指標 2：微量元素 -->
+                <text class="chart-bar-label" x="116" y="68">微量元素</text>
+                <text class="chart-bar-pct" x="304" y="68">100%</text>
+                <rect class="chart-bar-top" x="116" y="74" width="188" height="8" rx="4" />
+                <rect class="chart-bar-ugly" x="116" y="85" width="188" height="8" rx="4" />
+
+                <!-- 指標 3：口感與香氣 -->
+                <text class="chart-bar-label" x="116" y="113">口感與香氣</text>
+                <text class="chart-bar-pct" x="304" y="113">100%</text>
+                <rect class="chart-bar-top" x="116" y="119" width="188" height="8" rx="4" />
+                <rect class="chart-bar-ugly" x="116" y="130" width="188" height="8" rx="4" />
+              </svg>
+            </figure>
           </article>
 
           <!-- 卡片 3：切身型數據 -->
           <article class="data-card">
             <span class="data-badge">切身型數據</span>
             <p class="data-number" data-target="1200">省 $1,200 / 月</p>
-            <h3 class="data-card-title">每月減少 18 公斤碳排</h3>
+            <h3 class="data-card-title">每月多 12 個便當・減少 18 公斤碳排</h3>
             <p class="data-card-text">
-              每位大學外宿生每年因蔬果昂貴減少攝取，但若採購格外品，每月可省下 $1,200 元並減少 18 公斤碳排，同時拯救自己的健康與荷包。
+              大學外宿生改買格外品，每月省下的 $1,200 元相當於多出 12 個百元便當（或 24 杯手搖飲）；減少的 18 公斤碳排，約等於少騎機車 360 公里（台北直達高雄），也是 1 棵樹整年的吸碳量！
             </p>
+            <figure class="data-chart" aria-label="外宿生省錢與減碳生活等值換算圖">
+              <figcaption class="data-chart-header">
+                <span class="data-chart-title">外宿生活有感換算（每月）</span>
+                <span class="data-chart-legend">
+                  <span class="legend-item"><i class="legend-dot legend-dot-save"></i>省錢</span>
+                  <span class="legend-item"><i class="legend-dot legend-dot-eco"></i>減碳</span>
+                </span>
+              </figcaption>
+              <svg class="data-chart-svg" viewBox="0 0 320 148" role="img" aria-labelledby="chart3-title">
+                <title id="chart3-title">外宿生每月效益生活換算：省下 1,200 元等於 12 個百元便當；減少 18 公斤碳排約等於機車從台北騎到高雄 360 公里，或 1 棵樹一整年的吸碳量</title>
+                <defs>
+                  <!-- 迷你便當盒圖示（18x18，1:1 呈現 12 個便當） -->
+                  <g id="bento-icon">
+                    <rect x="0.5" y="1.5" width="17" height="15" rx="3" fill="#FFFFFF" stroke="#E76F51" stroke-width="1.3" />
+                    <line x1="9" y1="2" x2="9" y2="16" stroke="#FAD4C8" stroke-width="1" />
+                    <line x1="9" y1="9" x2="17" y2="9" stroke="#FAD4C8" stroke-width="1" />
+                    <circle cx="4.8" cy="9" r="2.7" fill="#F4A261" />
+                    <rect x="10.5" y="3.5" width="5" height="4" rx="1" fill="#52B788" />
+                    <rect x="10.5" y="10.5" width="5" height="4" rx="1" fill="#E76F51" />
+                  </g>
+                </defs>
+
+                <!-- 上半部：省下 $1,200 = 12 個百元便當（1:1 實物數量） -->
+                <rect class="chart-card-save" x="10" y="6" width="300" height="62" rx="8" />
+                <text class="chart-metric-accent-left" x="20" y="23">$1,200 / 月</text>
+                <text class="chart-sub-right" x="300" y="23">＝ 12 個百元便當（或 24 杯手搖飲）</text>
+                <g class="chart-bento-row">
+                  <use href="#bento-icon" x="20" y="37" />
+                  <use href="#bento-icon" x="43" y="37" />
+                  <use href="#bento-icon" x="66" y="37" />
+                  <use href="#bento-icon" x="89" y="37" />
+                  <use href="#bento-icon" x="112" y="37" />
+                  <use href="#bento-icon" x="135" y="37" />
+                  <use href="#bento-icon" x="158" y="37" />
+                  <use href="#bento-icon" x="181" y="37" />
+                  <use href="#bento-icon" x="204" y="37" />
+                  <use href="#bento-icon" x="227" y="37" />
+                  <use href="#bento-icon" x="250" y="37" />
+                  <use href="#bento-icon" x="273" y="37" />
+                </g>
+
+                <!-- 下半部：減碳 18 kg = 台北到高雄機車 360km / 1 棵樹年吸碳 -->
+                <rect class="chart-card-eco" x="10" y="78" width="300" height="64" rx="8" />
+                <text class="chart-metric-eco-left" x="20" y="95">18 kg 碳排 / 月</text>
+                <text class="chart-sub-right" x="300" y="95">約等於以下任一減碳行動</text>
+
+                <!-- 左側路線比較：台北 ➔ 高雄 (360 km) -->
+                <text class="chart-city-label" x="20" y="126">台北</text>
+                <circle class="chart-route-dot" cx="48" cy="122" r="3" />
+                <line class="chart-route-line" x1="51" y1="122" x2="173" y2="122" />
+                <text class="chart-route-text" x="112" y="114">少騎機車約 360 km</text>
+                <circle class="chart-route-dot" cx="176" cy="122" r="3" />
+                <text class="chart-city-label" x="184" y="126">高雄</text>
+
+                <line class="chart-eco-divider" x1="218" y1="103" x2="218" y2="134" />
+
+                <!-- 右側樹木對照：1 棵樹整年吸碳 -->
+                <g transform="translate(228, 105)">
+                  <rect x="7.5" y="18" width="3" height="9" rx="1" fill="#8D5B4C" />
+                  <circle cx="9" cy="13" r="7.5" fill="#2D6A4F" />
+                  <circle cx="5.5" cy="10.5" r="4" fill="#52B788" />
+                </g>
+                <text class="chart-tree-title" x="252" y="117">1 棵樹</text>
+                <text class="chart-tree-sub" x="252" y="130">整年吸碳量</text>
+              </svg>
+            </figure>
           </article>
         </div>
       </div>
@@ -292,8 +461,31 @@
               「以前去超市總覺得歪掉的小黃瓜怪怪的，自從跟室友一起訂格外品蔬果箱後，切丁煮咖哩根本吃不出差別，這個月伙食費直接省下一千多塊！」
             </p>
             <footer class="testimonial-author">
-              <strong class="author-name">阿豪（大二外宿生）</strong>
-              <span class="author-dept">資訊傳播與新聞傳播學群</span>
+              <div class="author-avatar author-avatar-mint" aria-hidden="true">
+                <svg class="author-portrait-svg" viewBox="0 0 80 80">
+                  <!-- 阿豪：韓系微蓬鬆碎瀏海短髮 ＋ 細框眼鏡 ＋ 連帽衛衣抽繩 -->
+                  <path class="portrait-line" d="M24,35 C21,23 27,13 40,13 C53,13 59,23 56,35" />
+                  <path class="portrait-line-soft" d="M30,19 Q40,16 50,19.5" />
+                  <path class="portrait-line" d="M24.5,30.5 Q30,22.5 36.5,28 Q41.5,21.5 48,28 Q53,23 55.5,30.5" />
+                  <path class="portrait-line" d="M25,34 C25,43 31.5,51.5 40,51.5 C48.5,51.5 55,43 55,34" />
+                  <path class="portrait-line-soft" d="M24.8,35.5 C22.5,36 22.8,42 25.3,42.2 M55.2,35.5 C57.5,36 57.2,42 54.7,42.2" />
+                  <path class="portrait-line-soft" d="M28.5,31.2 Q32.5,29.5 36.2,31 M43.8,31 Q47.5,29.5 51.5,31.2" />
+                  <path class="portrait-accent" d="M27.3,36 A5.2,5.2 0 1,0 37.7,36 A5.2,5.2 0 1,0 27.3,36 M37.7,35.6 Q40,34.3 42.3,35.6 M42.3,36 A5.2,5.2 0 1,0 52.7,36 A5.2,5.2 0 1,0 42.3,36 M27.3,35.6 L24.8,35.2 M52.7,35.6 L55.2,35.2" />
+                  <path class="portrait-line" d="M30.2,36.2 Q32.5,34.4 34.8,36.2 M45.2,36.2 Q47.5,34.4 49.8,36.2" />
+                  <path class="portrait-line-soft" d="M40,36 L38.8,42.4 Q40.2,43.6 41.7,42.7" />
+                  <path class="portrait-line" d="M35.5,46.2 Q40,48.8 44.8,45.8" />
+                  <path class="portrait-line" d="M34.5,50 L33.8,59 M45.5,50 L46.2,59" />
+                  <path class="portrait-line" d="M11,82 C13,66 23,60 31.5,58.8 C35,64 45,64 48.5,58.8 C57,60 67,66 69,82" />
+                  <path class="portrait-line-soft" d="M29,59 C27.5,54.5 31.5,53.5 33.8,57.5 M51,59 C52.5,54.5 48.5,53.5 46.2,57.5 M34.2,59.5 Q40,63.2 45.8,59.5" />
+                  <path class="portrait-line-soft" d="M36,64 Q35.2,71 35.8,76 M44,64 Q44.8,71 44.2,76" />
+                  <circle class="portrait-dot" cx="35.8" cy="76.5" r="1.1" />
+                  <circle class="portrait-dot" cx="44.2" cy="76.5" r="1.1" />
+                </svg>
+              </div>
+              <div class="author-meta">
+                <strong class="author-name">阿豪（大二外宿生）</strong>
+                <span class="author-dept">資訊傳播與新聞傳播學群</span>
+              </div>
             </footer>
           </article>
 
@@ -302,8 +494,30 @@
               「在租屋處用快煮鍋煮微瑕牛番茄豆腐湯超方便，維生素 C 一點都沒少，熬夜趕專題時終於不用再吃油膩泡麵了！」
             </p>
             <footer class="testimonial-author">
-              <strong class="author-name">小芸（大三外宿生）</strong>
-              <span class="author-dept">藝術與設計學群</span>
+              <div class="author-avatar author-avatar-warm" aria-hidden="true">
+                <svg class="author-portrait-svg" viewBox="0 0 80 80">
+                  <!-- 小芸：空氣八字瀏海鎖骨微捲中長髮 ＋ 垂墜耳環 ＋ 針織開襟外套 -->
+                  <path class="portrait-line" d="M40,12 C24,12 18,24 19,40 C19.5,50 17,59 21,67 C22.5,70.5 24,74 22.5,81" />
+                  <path class="portrait-line" d="M40,12 C56,12 62,24 61,40 C60.5,50 63,59 59,67 C57.5,70.5 56,74 57.5,81" />
+                  <path class="portrait-line-soft" d="M23,46 Q25,55 24,63 M57,46 Q55,55 56,63" />
+                  <path class="portrait-line" d="M41.5,15.5 Q34,23 25.5,33 M41.5,15.5 Q48.5,24 54.5,33" />
+                  <path class="portrait-line" d="M26,33 C26,43 32,51.5 40,51.5 C48,51.5 54,43 54,33" />
+                  <path class="portrait-line-soft" d="M29.5,30.8 Q33,29.2 36.5,30.8 M43.5,30.8 Q47,29.2 50.5,30.8" />
+                  <path class="portrait-line" d="M30,35.8 Q33,33.8 36,35.8 M44,35.8 Q47,33.8 50,35.8" />
+                  <path class="portrait-line-soft" d="M29.6,35.2 L28.2,34.1 M50.4,35.2 L51.8,34.1 M40,36 L39.2,42 Q40,42.8 41.2,42.2" />
+                  <path class="portrait-line" d="M36,45.8 Q40,48.4 44,45.8" />
+                  <path class="portrait-accent" d="M25.2,41.5 A2.1,2.1 0 1,1 25.1,41.4 M54.8,41.5 A2.1,2.1 0 1,1 54.7,41.4" />
+                  <path class="portrait-line" d="M35.5,50 L35,59 M44.5,50 L45,59" />
+                  <path class="portrait-line-soft" d="M32.5,62 Q36,63.2 38.2,62.3 M47.5,62 Q44,63.2 41.8,62.3" />
+                  <path class="portrait-line" d="M12,82 C14,67 24,60 32,59 L40,74.5 L48,59 C56,60 66,67 68,82" />
+                  <path class="portrait-line-soft" d="M34.5,59.8 Q40,64.2 45.5,59.8 M40,74.5 L40,82" />
+                  <circle class="portrait-accent-dot" cx="37.8" cy="76.8" r="1.2" />
+                </svg>
+              </div>
+              <div class="author-meta">
+                <strong class="author-name">小芸（大三外宿生）</strong>
+                <span class="author-dept">藝術與設計學群</span>
+              </div>
             </footer>
           </article>
 
@@ -312,8 +526,31 @@
               「知道台灣每年丟掉 380 萬噸格外蔬果真的超震撼。現在每週固定跟宿舍樓友湊單買小農格外品，省錢又能幫產地減廢，很有成就感！」
             </p>
             <footer class="testimonial-author">
-              <strong class="author-name">凱文（大四外宿生）</strong>
-              <span class="author-dept">人文社會與管理學群</span>
+              <div class="author-avatar author-avatar-sage" aria-hidden="true">
+                <svg class="author-portrait-svg" viewBox="0 0 80 80">
+                  <!-- 凱文：俐落旁分紋理短髮 ＋ 開領襯衫搭素T -->
+                  <path class="portrait-line" d="M23.5,35 C21.5,24 25,13 38.5,12 C51.5,11.5 58.5,20 56.5,35" />
+                  <path class="portrait-line" d="M25,31 Q31,20.5 43,21.5 Q51,22.2 55.5,30" />
+                  <path class="portrait-line-soft" d="M31,14.5 Q36,18 41,21.2 M45.5,14 Q49.5,18 52.5,23" />
+                  <path class="portrait-line" d="M25,33 L25.5,41 C26,46.5 33,52 40,52 C47,52 54,46.5 54.5,41 L55,33" />
+                  <path class="portrait-line-soft" d="M24.8,35 C22.5,35.5 22.8,41.8 25.4,42 M55.2,35 C57.5,35.5 57.2,41.8 54.6,42" />
+                  <path class="portrait-line" d="M28.5,31.2 Q32.5,29.5 36.8,31 M43.2,31 Q47.5,29.5 51.5,31.2" />
+                  <path class="portrait-line" d="M29.8,35.8 Q33,34.4 36.2,35.8 M43.8,35.8 Q47,34.4 50.2,35.8" />
+                  <circle class="portrait-dot" cx="33" cy="36.2" r="1.05" />
+                  <circle class="portrait-dot" cx="47" cy="36.2" r="1.05" />
+                  <path class="portrait-line-soft" d="M40,35.5 L39.2,42.2 Q40.2,43.2 41.5,42.5" />
+                  <path class="portrait-line" d="M35.5,46.2 Q40,48.6 44.8,45.8" />
+                  <path class="portrait-line" d="M34.5,50 L33.8,59 M45.5,50 L46.2,59" />
+                  <path class="portrait-line" d="M11,82 C13,66 23,60 32,58.5 M69,82 C67,66 57,60 48,58.5" />
+                  <path class="portrait-line" d="M32,58.5 L28,67 L35,69 L38.5,82 M48,58.5 L52,67 L45,69 L41.5,82" />
+                  <path class="portrait-line-soft" d="M34.2,59 Q40,63.2 45.8,59" />
+                  <path class="portrait-accent" d="M49,73 L58,73 L58,82" />
+                </svg>
+              </div>
+              <div class="author-meta">
+                <strong class="author-name">凱文（大四外宿生）</strong>
+                <span class="author-dept">人文社會與管理學群</span>
+              </div>
             </footer>
           </article>
         </div>
